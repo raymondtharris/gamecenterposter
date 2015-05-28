@@ -1,0 +1,27 @@
+<div ng-controller="GCPGamesController">
+	<input type="text" ng-model="searchWord"/>
+	<div ng-if="gameChosen">
+		<form ng-submit="postGame()">
+		<img height="120" width="120" ng-src="{{chosenGame.src}}"/>
+		{{chosenGame.name}}
+		{{chosenGame.dev}}
+		<input type="text" ng-model="currAch"/>
+		{{chosenGame.maxAch}}
+		<input type="text" ng-model="currPoints"/>
+		{{chosenGame.maxPoints}}
+		<input type="submit"  value="Add Game"/>
+		</form>
+	</div>
+	<div ng-repeat="game in gameList | filter:searchWord" ng-click="addGame()">
+		<img height="100" width="100" ng-src="{{game.src}}"/>
+		<div>{{game.name}}</div>
+	</div>
+	
+	<div>
+		<div ng-repeat="mine in myGames" >{{mine}}</div>
+		
+	</div>
+	
+	
+	
+</div>

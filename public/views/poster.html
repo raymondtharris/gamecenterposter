@@ -1,0 +1,31 @@
+<div ng-controller="GCPController">
+Game Center
+<form ng-submit="package_post()">
+	<label>Name</label><input type="text" ng-model="gcPost.user.name"/>
+	<div ng-click="setAvatar()" class="avatarPic"ng-repeat="av in avatars">
+		<img height="80px" width="80px"  ng-src="{{av}}"/>
+	</div>
+	<label>Points</label><input type="text" ng-model="gcPost.user.pointsCount"/>
+	<div ng-click="setGame()" class="gameIconBox" ng-repeat="g in games">
+		<img class="gameIcon" height="80px" width="80px" ng-src="{{g.src}}"/>
+		<div>{{g.name}}</div>
+	</div>
+	<label>Message</label><input type="text" ng-model="gcPost.postMessage"/>
+	<input type="submit" value="Send"/>
+</form>
+<div>
+	<div class="GCPostBlock" ng-repeat="po in posts" >
+		<div class="GCUserBlock">
+			<img class="postUserIcon" height="66px" width="66px" ng-src="{{po.user.avatarURL}}"/>
+			<div class="postUserName">{{po.user.name | limitTo:20}}</div>
+			<div class="postUserPointsCount">{{po.user.pointsCount}} Points</div>
+			<div class="GCpostMessage">{{po.postMessage}}</div>
+
+		</div>
+		<div class="GCGameBlock">
+			<img class="postGameIcon" height="36px" width="36px" ng-src="{{po.game.iconURL}}"/>
+			<div class="postGameName">{{po.game.name}}</div>
+		</div>
+	</div>
+</div>
+</div>

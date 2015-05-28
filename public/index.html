@@ -1,0 +1,89 @@
+<html ng-app="GCPoster">
+<head>
+<script type="text/javascript" src="lib/angular/angular.min.js"></script>
+<script type="text/javascript" src="lib/angular/angular-route.min.js"></script>
+
+<script type="text/javascript" src="js/gcpost.js"></script>
+<style>
+body{
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", sans-serif;
+}
+.gameIconBox{
+	border: 1px #ccc solid;
+	width: 110px;
+	height: 110px;
+	text-align: center;
+	margin: 2px 6px 0px 6px;
+}
+.gameIconBox:nth-child(2n){
+	float: left;
+	margin-left: 120px;
+	margin-top: -112px;
+}
+.gameIcon{
+	border-radius:8px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+.avatarPic{
+	height: 80px;
+	width: 80px;
+}
+.GCPostBlock{
+	width: 300px;
+	padding-bottom: 20px;
+	border: 2px solid #f3f3f3;
+	margin-bottom: 6px;
+}
+.GCUserBlock{
+	width:100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.postUserIcon{
+	border-radius: 33px;
+	float: left;
+	margin-left: 12px;
+	margin-right: 12px;
+}
+.postUserName{
+	font-size: 16pt;
+	margin-bottom: 4px;
+}
+.postUserPointsCount{
+	font-size: 10pt;
+	
+}
+.GCpostMessage{
+	padding-top: 10px;
+	width: 276px;
+	display: inline-block;
+	font-size: 15pt;
+	margin-left: 12px;
+	margin-right: 12px;
+}
+
+.GCGameBlock{
+	width: 100%;
+	padding-top: 10px;
+	border-top: 1px solid #f2f2f2;
+}
+
+.postGameIcon{
+	border-radius: 6px;
+	float: left;
+	margin-left: 12px;
+	margin-right: 10px;
+}
+.postGameName{
+	display: inline-block;
+	margin-top: 6px;
+	font-size: 14pt;
+}
+</style>
+</head>
+<body>
+<div ng-view=""></div>
+</body>
+</html>

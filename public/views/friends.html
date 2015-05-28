@@ -1,0 +1,12 @@
+<div ng-controller="GCPFriendsController">
+		
+	<div ng-repeat="av in avatars" ng-click="setAvatarURL()">
+		<img  height="100" width="100" ng-src="{{av}}"/>
+	</div>
+	<form ng-submit="AddUser()">
+		<label>Name</label><input ng-model="name" type="text"/>
+		<input type="submit" value="Add" />
+	</form>
+	<div ng-repeat="ua in theUsers" >{{ua}}</div>
+	
+</div>
